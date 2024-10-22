@@ -1,0 +1,143 @@
+.product {
+  margin: 40px auto;
+  width: 95%;
+  max-width: 1400px;
+  text-align: center;
+}
+
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 250px;
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+.product-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.product-item p:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #000;
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1200px) {
+  .product-item {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+  }
+}
+
+/* Medium Screens (Tablets & Smaller Desktops) */
+@media (max-width: 1199px) {
+  .product-item {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+/* Small Screens (Tablets & Large Phones) */
+@media (max-width: 768px) {
+  .product-item {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .product {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .product-gallery {
+    gap: 15px;
+  }
+
+  .product-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .product-gallery img {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    margin: 0;
+  }
+
+  .product-item p {
+    margin: 0;
+    font-size: 15px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .product-item {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .product-gallery img {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+  }
+
+  .product-item p {
+    font-size: 14px;
+  }
+}
+
+/* Support for older browsers */
+@supports not (gap: 20px) {
+  .product-gallery {
+    margin: -10px;
+  }
+
+  .product-item {
+    margin: 10px;
+  }
+}

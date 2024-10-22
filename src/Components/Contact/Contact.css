@@ -1,0 +1,135 @@
+.contact {
+  margin: 80px auto;
+  max-width: 90%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.contact-col {
+  flex-basis: 48%; /* Two columns by default */
+  color: #676767;
+  padding: 20px;
+}
+
+.contact-col h3 {
+  color: #000f38;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-col h3 img {
+  width: 35px;
+  margin-left: 10px;
+}
+
+.contact-col p {
+  max-width: 450px;
+  line-height: 1.3;
+}
+
+.contact-col ul li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contact-col ul li img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.btn-- {
+  background: #504de4;
+  color: #fff;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-- img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.contact form input,
+.contact form textarea {
+  display: block;
+  width: 100%;
+  background: #ebecfe;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  resize: none;
+}
+
+.contact-col span {
+  display: block;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+  .contact {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the columns */
+  }
+
+  .contact-col {
+    flex-basis: 100%; /* Make columns stack vertically */
+    text-align: center; /* Center the text */
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 90%; /* Adjust width for better spacing on smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .contact-col {
+    flex-basis: 100%; /* Columns take full width on mobile */
+    padding: 10px; /* Reduce padding for small screens */
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 100%; /* Full width for inputs and textarea */
+  }
+
+  .btn-- {
+    width: 100%; /* Button takes full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-col {
+    padding: 5px; /* Further reduce padding on small mobile devices */
+  }
+
+  .contact-col h3 {
+    font-size: 20px; /* Reduce font size for headings on small devices */
+  }
+
+  .btn-- {
+    font-size: 14px; /* Adjust button text size */
+    padding: 12px 20px; /* Adjust padding for the button */
+  }
+}

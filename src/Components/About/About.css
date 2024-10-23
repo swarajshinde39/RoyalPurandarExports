@@ -143,7 +143,6 @@
   background: #3a36b8;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(80, 77, 228, 0.2);
-  animation: pulse 1.5s infinite;
 }
 
 .--btn::after {

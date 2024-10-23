@@ -1,30 +1,16 @@
 import React from "react";
-import Navbar from "./Components/Navbar/Navbar";
-import Hero from "./Components/Hero/Hero";
-import Programs from "./Components/Programs/programs";
-import Title from "./Components/Title/Title";
-import About from "./Components/About/About";
+import Main2 from "./main_2";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Product from "./Components/Products/Product";
-import Slider from "./Components/Slider/Slider";
-import Contact from "./Components/Contact/Contact";
 
 const App = () => {
   return (
-    <div>
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <div className="container">
-        <Title subTitle="" title="WHY CHOOSE US!" />
-        <Programs></Programs>
-        <About></About>
-        <Title subTitle="" title=" OUR PRODUCTS"></Title>
-        <Product></Product>
-        <Title subTitle="" title={"We Are Certified Company"}></Title>
-        <Slider></Slider>
-        <Title subTitle="CONTACT US" title="Get in Touch!"></Title>
-        <Contact></Contact>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/Products" element={<Product></Product>}></Route>
+        <Route path="/" element={<Main2></Main2>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

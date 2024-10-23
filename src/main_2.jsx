@@ -7,6 +7,7 @@ import About from "./Components/About/About";
 import Product from "./Components/Products/Product";
 import Slider from "./Components/Slider/Slider";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 const Main2 = () => {
   return (
@@ -23,6 +24,7 @@ const Main2 = () => {
         <Slider></Slider>
         <Title subTitle="CONTACT US" title="Get in Touch!"></Title>
         <Contact></Contact>
+        <Footer></Footer>
       </div>
     </div>
   );

@@ -1,0 +1,300 @@
+.about-us-page {
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.about-header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f7e9a8;
+}
+
+.about-header h1 {
+  font-size: 48px;
+  color: #000;
+}
+
+.about-header p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.beliefs-container {
+  background: url("/path-to-background-image.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.belief-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.belief-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #1e2350;
+}
+
+.belief-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .beliefs-container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .belief-card {
+    padding: 15px;
+  }
+
+  .belief-title {
+    font-size: 20px;
+  }
+
+  .belief-description {
+    font-size: 14px;
+  }
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.slide {
+  flex: 0 0 auto;
+  min-width: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6));
+  }
+}
+
+/* Responsive for Tablet */
+@media (max-width: 768px) {
+  .slider-track {
+    width: calc(200px * 12);
+    animation: scroll 40s linear infinite;
+  }
+
+  .slide {
+    min-width: 200px;
+    height: 120px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 6));
+    }
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 480px) {
+  .slider-track {
+    width: calc(150px * 12);
+    animation: scroll 50s linear infinite;
+  }
+
+  .slide {
+    min-width: 150px;
+    height: 100px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 6));
+    }
+  }
+}
+.contact {
+  margin: 80px auto;
+  max-width: 90%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.contact-col {
+  flex-basis: 48%; /* Two columns by default */
+  color: #676767;
+  padding: 20px;
+}
+
+.contact-col h3 {
+  color: #000f38;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-col h3 img {
+  width: 35px;
+  margin-left: 10px;
+}
+
+.contact-col p {
+  max-width: 450px;
+  line-height: 1.3;
+}
+
+.contact-col ul li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contact-col ul li img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.btn-- {
+  background: #504de4;
+  color: #fff;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-- img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.contact form input,
+.contact form textarea {
+  display: block;
+  width: 100%;
+  background: #ebecfe;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  resize: none;
+}
+
+.contact-col span {
+  display: block;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+  .contact {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the columns */
+  }
+
+  .contact-col {
+    flex-basis: 100%; /* Make columns stack vertically */
+    text-align: center; /* Center the text */
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 90%; /* Adjust width for better spacing on smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .contact-col {
+    flex-basis: 100%; /* Columns take full width on mobile */
+    padding: 10px; /* Reduce padding for small screens */
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 100%; /* Full width for inputs and textarea */
+  }
+
+  .btn-- {
+    width: 100%; /* Button takes full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-col {
+    padding: 5px; /* Further reduce padding on small mobile devices */
+  }
+
+  .contact-col h3 {
+    font-size: 20px; /* Reduce font size for headings on small devices */
+  }
+
+  .btn-- {
+    font-size: 14px; /* Adjust button text size */
+    padding: 12px 20px; /* Adjust padding for the button */
+  }
+}
